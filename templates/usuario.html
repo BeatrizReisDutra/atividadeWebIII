@@ -1,0 +1,37 @@
+{% extends "home.html" %}
+
+{% block title %}Perfil de {{ dados.nome }}{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/usuario.css') }}">
+{% endblock %}
+
+{% block content %}
+        
+    <div class="perfil-card">
+        <div class="header-perfil">
+            <!-- Acessa o nome passado pelo Flask: dados["nome"] -->
+            <h1>Olá, {{ dados.nome }}!</h1>
+            <p style="color: #6c757d;">Seu perfil</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="label">Nome:</span>
+                <span class="value">{{ dados.nome }}</span>
+            </div>
+            
+            <div class="info-item">
+                <span class="label">Profissão/Ocupação:</span>
+                <!-- Acessa a profissao: dados["profissao"] -->
+                <span class="value">{{ dados.profissao }}</span>
+            </div>
+            
+            <div class="info-item">
+                <span class="label">Disciplina:</span>
+                <!-- Acessa a disciplina: dados["disciplina"] -->
+                <span class="value">{{ dados.disciplina }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}

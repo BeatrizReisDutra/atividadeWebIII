@@ -76,7 +76,11 @@ footer {
     padding: 20px 0;
     margin-top: auto; /* Garante que o rodapé fique no final da página */
 }
-
+footer p {
+    /* parágrafo  largura de 500px */
+    width: 500px;
+    margin: 0 auto; /* Centraliza o bloco */
+}
 /* Responsividade básica para navegação */
 @media (max-width: 600px) {
     .container {
