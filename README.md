@@ -7,7 +7,7 @@ O objetivo é compreender o funcionamento das **rotas**, **templates HTML**.
 
 ## 📁 Estrutura do Projeto
 
-```
+
 ├── static/
 │   ├── css/
 │   │   └── estilo.css
@@ -29,7 +29,7 @@ O objetivo é compreender o funcionamento das **rotas**, **templates HTML**.
 │
 ├── main.py
 └── appImport.py
-```
+
 
 ---
 
