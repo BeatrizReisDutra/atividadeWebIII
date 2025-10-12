@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Projeto Flask{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+    <body>
+        <header>
+            <div class="container">
+                <a href="{{ url_for('homepage') }}" class="logo">Meu App</a>
+                <nav>
+                    <!-- Usando 'indice' conforme corrigimos anteriormente -->
+                    <a href="{{ url_for('homepage') }}">Início</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Login</a>
+                    <a href="#">Rota Exemplo</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            
+        </main>
+
+        <footer>
+            <div class="container">
+                &copy; 2025 Projeto TSI Web III | Feito com Flask.
+            </div>
+        </footer>
+
+    </body>
+</html>
