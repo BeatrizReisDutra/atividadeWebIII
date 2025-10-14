@@ -12,20 +12,20 @@ O objetivo é compreender o funcionamento das **rotas**, **templates HTML**.
 │   ├── css/
 │   │   └── estilo.css
 │   ├── imagens/
-│   │   ├── computador.jpg
-│   │   ├── professor.jpg
-│   │   └── professora.jpg
+│   │   ├── 
+│   │   ├── 
+│   │   └── 
 │   └── js/
-│       ├── config.js
-│       ├── forms.js
-│       └── script1.js
+│       ├── 
+│       ├── 
+│       └── script.js
 │
-├── t_templates/
-│   ├── t_base.html
-│   ├── t_index.html
-│   ├── t_contato.html
-│   ├── t_login.html
-│   └── t_usuario.html
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── 
+│   ├── login.html
+│   └── usuario.html
 │
 ├── main.py
 └── appImport.py
@@ -35,7 +35,7 @@ O objetivo é compreender o funcionamento das **rotas**, **templates HTML**.
 
 ## ⚙️ Funcionalidades Principais
 
-- Página inicial (`/` ou `/index`)
+- Página inicial (`/`)
 - Página de contato (`/contato`)
 - Página de login (`/login`)
 - Página de usuário com parâmetros dinâmicos (`/usuarios/<nome_usuario>/<nome_profissao>`)
@@ -67,7 +67,7 @@ O objetivo é compreender o funcionamento das **rotas**, **templates HTML**.
 | Rota | Método | Descrição |
 |------|---------|-----------|
 | `/` ou `/index` | GET | Página inicial |
-| `/contato` | GET | Página de contato |
+| `/` | GET | Página de  |
 | `/login` | GET/POST | Página de login |
 | `/usuarios/<nome>/<profissao>` | GET | Página dinâmica com dados de usuário |
 
