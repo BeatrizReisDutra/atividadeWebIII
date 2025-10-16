@@ -1,0 +1,175 @@
+/* Variáveis CSS para cores */
+:root {
+    --color-primary: #4f46e5; /* Indigo-600 */
+    --color-primary-dark: #4338ca; /* Indigo-700 */
+    --color-success: #10b981; /* Emerald */
+    --color-error: #ef4444; /* Red */
+    --color-text-dark: #1f2937; /* Gray-800 */
+    --color-text-medium: #6b7280; /* Gray-500 */
+    --color-background-light: #f7f9fb;
+    --color-border: #d1d5db;
+}
+
+/* Estilos Base e Layout */
+body {
+    font-family: Arial, sans-serif; /* Usando fonte segura */
+    background-color: var(--color-background-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Cartão de Login */
+.login-card {
+    width: 100%;
+    max-width: 28rem;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Espaçamento interno */
+.space-y-4 > * + * { margin-top: 1rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+/* Cabeçalho */
+.header-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-title {
+    font-size: 1.875rem; /* 3xl */
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 0.25rem;
+}
+
+.header-subtitle {
+    color: var(--color-text-medium);
+    font-size: 0.875rem;
+}
+
+/* Labels */
+.input-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151; /* Gray-700 */
+    margin-bottom: 0.25rem;
+}
+
+/* Campos de Input */
+.input-field {
+    width: 100%;
+    padding: 0.625rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
+}
+.input-field:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2); /* Cor de foco */
+    outline: none;
+}
+
+/* Feedback de Validação */
+.validation-box {
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    background-color: #f9fafb; /* Gray-50 */
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+.validation-box p {
+    font-weight: 600;
+    color: #374151;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.validation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.validation-list li {
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    color: var(--color-text-medium);
+}
+
+/* Estados de Validação Dinâmicos */
+.validation-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
+}
+.validation-item.valid svg {
+    color: var(--color-success);
+}
+.validation-item.invalid svg {
+    color: var(--color-error);
+}
+.validation-item.valid {
+    color: var(--color-text-dark);
+}
+
+/* Botão de Submissão */
+.submit-button {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.625rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, opacity 0.2s;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+.submit-button:hover:not(:disabled) {
+    background-color: var(--color-primary-dark);
+}
+.submit-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Caixa de Mensagem (Feedback) */
+#messageBox {
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+.bg-blue-100 { background-color: #e0f2fe; }
+.text-blue-800 { color: #1e40af; }
+.bg-green-100 { background-color: #d1fae5; }
+.text-green-800 { color: #065f46; }
+.bg-red-100 { background-color: #fee2e2; }
+.text-red-800 { color: #991b1b; }
+
+/* Link de Novo Cadastro */
+.register-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-medium);
+    margin-top: 1rem;
+}
+.register-link {
+    font-weight: 500;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+.register-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
