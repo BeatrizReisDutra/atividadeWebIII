@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="login-card space-y-6">
+        
+        <header class="header-section">
+            <h1 class="header-title">Login</h1>
+            <p class="header-subtitle">Insira suas credenciais</p>
+        </header>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="message-container">
+                    {% for category, message in messages %}
+                        <p class="flash-{{ category }}">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        
+        <form method="POST" action="{{ url_for('login_post') }}" class="space-y-4">
+            
+            <div>
+                <label for="email" class="input-label">Usuário</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    required 
+                    class="input-field"
+                    placeholder="seu.email@exemplo.com"
+                >
+            </div>
+
+            <div>
+                <label for="senha" class="input-label">Senha</label>
+                <input 
+                    type="password" 
+                    id="senha" 
+                    name="senha" 
+                    required 
+                    class="input-field"
+                    placeholder="Mínimo 6 caracteres"
+                >
+            </div>
+
+            <div id="passwordValidationFeedback" class="validation-box">
+                <p>A senha deve conter:</p>
+                <ul class="validation-list">
+                    <li id="val-length" class="validation-item">Mínimo de 6 caracteres</li>
+                    <li id="val-uppercase" class="validation-item">1 Letra Maiúscula</li>
+                    <li id="val-number" class="validation-item">1 Número</li>
+                    <li id="val-special" class="validation-item">1 Caractere especial</li>
+                </ul>
+            </div>
+            
+            <button 
+                type="submit" 
+                id="submitButton"
+                class="submit-button"
+            >
+                Entrar
+            </button>
+        </form>
+
+        <p class="register-text">
+            <a href="#" class="register-link">
+                Criar Cadastro
+            </a>
+        </p>
+
+    </div>
+</body>
+</html>

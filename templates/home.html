@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Projeto Flask{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    {% block head %}{% endblock %}
+
 </head>
     <body>
         <header>
@@ -16,17 +19,19 @@
                     <a href="#">Contato</a>
                     <a href="#">Login</a>
                     <a href="{{ url_for('cadastro') }}">Cadastro</a>
+                    <a href="{{ url_for('login_get') }}">Login</a>
+                    <a href="{{ url_for('dados_usuario') }}">Usuário</a>
                 </nav>
             </div>
         </header>
 
         <main>
-            
+            {% block content %}{% endblock %}
         </main>
 
         <footer>
             <div class="container">
-                &copy; 2025 Projeto TSI Web III | Feito com Flask.
+                <p>&copy; 2025 Projeto Web III | Feito com Flask.</p>
             </div>
         </footer>
 

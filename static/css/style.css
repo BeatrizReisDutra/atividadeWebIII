@@ -76,6 +76,10 @@ footer {
     padding: 20px 0;
     margin-top: auto; /* Garante que o rodapé fique no final da página */
 }
+footer .container {
+    /* O margin: 0 auto; já está centralizando o container em relação ao footer */
+    text-align: center; /* Centraliza o texto DENTRO do container */
+}
 
 /* Responsividade básica para navegação */
 @media (max-width: 600px) {
