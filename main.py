@@ -6,5 +6,9 @@ app = Flask(__name__)
 def homepage():
     return render_template('index.html')
 
+@app.route('/cadastro')
+def cadastro():
+    return render_template('cadastro.html')
+
 if __name__ == '__main__':
     app.run(port=8000, debug=True)

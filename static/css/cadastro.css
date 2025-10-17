@@ -1,0 +1,124 @@
+/* CSS Puro para Estilização */
+:root {
+    --cor-primaria: #0e7490; /* Teal Dark */
+    --cor-primaria-hover: #0f766e;
+    --cor-fundo: #f8fafc;
+    --cor-erro: #ef4444;
+    --cor-sucesso: #10b981;
+    --cor-borda: #e5e7eb;
+    --cor-texto: #374151;
+    --cor-cinza: #6b7280;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhado ao topo, mas centralizado horizontalmente */
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 42rem; /* Aumentado para melhor layout de formulário */
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--cor-texto);
+    font-size: 1.875rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+    /* Layout responsivo: 1 coluna no mobile, 2 colunas no desktop */
+    grid-template-columns: 1fr;
+}
+
+/* Layout para desktop (a partir de 640px) */
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .full-width {
+        grid-column: span 2;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: var(--cor-cinza);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 0.5rem;
+    color: var(--cor-texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(14, 116, 144, 0.2);
+    outline: none;
+}
+
+/* Botão de Cadastro */
+button {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+/* Caixa de Mensagem (Substitui alert()) */
+#messageBox {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    display: none; /* Escondido por padrão */
+}
+
+.error {
+    background-color: #fee2e2; /* Red-100 */
+    color: var(--cor-erro);
+    border: 1px solid var(--cor-erro);
+}
+
+.success {
+    background-color: #d1fae5; /* Green-100 */
+    color: var(--cor-sucesso);
+    border: 1px solid var(--cor-sucesso);
+}
