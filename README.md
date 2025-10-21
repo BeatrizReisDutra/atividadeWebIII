@@ -5,15 +5,11 @@ Este projeto é uma aplicação web simples desenvolvida com Flask, com foco em 
 ---
 # 🚀 Tecnologias Utilizadas
 
-Python 3
-
-Flask
-
-HTML5
-
-CSS3
-
-JavaScript
+- **Python 3**
+- **Flask**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
 
 ---
 
@@ -51,31 +47,28 @@ JavaScript
 
 ## ⚙️ Funcionalidades Principais
 
-✅ Tela de Login
+✅ **Tela de Login**
 
 Validação de senha via Regex:
 
-Mínimo de 6 caracteres
+- Mínimo de **6 caracteres**
+- Pelo menos **uma letra maiúscula**
+- Pelo menos **um número**
+- Pelo menos **um caractere especial**
 
-Pelo menos uma letra maiúscula
-
-Pelo menos um número
-
-Pelo menos um caractere especial
-
-✅ Página de Cadastro
+✅ **Página de Cadastro**
 
 Página simples para cadastro de novos usuários.
 
-✅ Página do Usuário
+✅ **Página do Usuário**
 
-Exibe dados fixos (nome, profissão e disciplina) como exemplo de passagem de dados do back-end para o front-end.
+Exibe dados fixos (**nome**, **profissão** e **disciplina**) como exemplo de passagem de dados do back-end para o front-end.
 
-✅ Página Stack
+✅ **Página Stack**
 
-Mostra tecnologias utilizadas no projeto (HTML, CSS, JS, Python, Flask).
+Mostra tecnologias utilizadas no projeto (**HTML**, **CSS**, **JS**, **Python**, **Flask**).
 
-✅ Página Home
+✅ **Página Home**
 
 Acesso principal após o login bem-sucedido.
 
