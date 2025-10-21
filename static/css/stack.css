@@ -1,0 +1,167 @@
+/* Variáveis de cores para facilitar a manutenção */
+:root {
+    --color-background: #0d1117;
+    --color-text-light: #c9d1d9;
+    --color-card-bg: #1F2937;
+    --color-card-border: #374151;
+    --color-gray-400: #9CA3AF;
+    --color-gray-500: #6B7280;
+    --color-blue-400: #60A5FA;
+    --color-green-400: #4ADE80;
+    --color-highlight: #4CAF50;
+    --color-h1-start: #60A5FA; /* blue-400 */
+    --color-h1-end: #4ADE80;   /* green-400 */
+}
+
+/* Estilos Globais e do Corpo */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    min-height: 100vh;
+    
+    /* Equivalente a flex flex-col items-center justify-center p-4 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Estilos do Container Principal (max-w-6xl w-full) */
+.container-wrapper {
+    max-width: 72rem; /* 1152px, equivalente a max-w-6xl */
+    width: 100%;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    /* Equivalente a text-center py-10 */
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+h1 {
+    /* Equivalente a text-5xl font-extrabold mb-3 */
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+
+    /* Equivalente a bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-green-400 */
+    color: transparent;
+    background-image: linear-gradient(to right, var(--color-h1-start), var(--color-h1-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+header p {
+    /* Equivalente a text-xl text-gray-400 */
+    font-size: 1.25rem;
+    color: var(--color-gray-400);
+}
+
+/* Estilos para a grade principal de logos */
+main {
+    /* Equivalente a grid gap-6 justify-items-center */
+    display: grid;
+    gap: 1.5rem;
+    justify-items: center;
+    /* grid-cols-2 por padrão (para mobile) */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Responsividade para desktop (md:grid-cols-5) */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* Estilos específicos para os cards dos logos */
+.logo-card {
+    /* Equivalente a p-6 w-full max-w-xs bg-gray-800 border border-gray-700 rounded-xl flex flex-col items-center shadow-lg */
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 20rem; /* max-w-xs */
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.logo-card:hover {
+    /* Equivalente a hover:translate-y-[-8px] hover:shadow-xl hover:border-custom-color */
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover de Borda Específico (simulação do Tailwind com CSS puro) */
+#card-flask:hover { border-color: #3B82F6; /* blue-500 */ }
+#card-python:hover { border-color: #F59E0B; /* yellow-500 */ }
+#card-html:hover { border-color: #F97316; /* orange-500 */ }
+#card-css:hover { border-color: #1D4ED8; /* blue-700 */ }
+#card-javascript:hover { border-color: #FCD34D; /* yellow-300 */ }
+
+/* NOVO: Estilo para IMG (w-20 h-20 mb-4) */
+.logo-card img {
+    width: 7rem; /* Aumentado de 5rem para 7rem */
+    height: 7rem; /* Aumentado de 5rem para 7rem */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    margin-bottom: 1rem;
+}
+
+/* Estilos dos Spans */
+.logo-card .title {
+    /* Equivalente a text-2xl font-semibold mt-2 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.logo-card .subtitle {
+    /* Equivalente a text-sm text-gray-500 */
+    font-size: 0.875rem;
+    color: var(--color-gray-500);
+}
+
+/* Estilos da Seção de Informações */
+section {
+    /* Equivalente a mt-12 p-6 bg-gray-800 border border-gray-700 rounded-xl */
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-card-border);
+    border-radius: 0.75rem;
+    width: 100%;
+}
+
+section h2 {
+    /* Equivalente a text-3xl font-bold mb-4 text-blue-400 */
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-blue-400);
+}
+
+.info-content {
+    /* Equivalente a space-y-4 text-left text-gray-400 */
+    text-align: left;
+    color: var(--color-gray-400);
+}
+
+.info-content p {
+    margin-bottom: 1rem; /* Simula space-y-4 */
+}
+
+/* Estilo para o destaque via JavaScript */
+.highlight {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-highlight) !important;
+}

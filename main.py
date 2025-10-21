@@ -46,5 +46,9 @@ def validar_senha(senha):
 def cadastro():
     return render_template('cadastro.html')
 
+@app.route('/stack')
+def stack():
+    return render_template('stack.html')
+
 if __name__ == '__main__':
     app.run(port=8000, debug=True)

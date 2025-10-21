@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologias de Desenvolvimento Web (Flask & Frontend)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stack.css') }}">
+</head>
+<body class="flex flex-col items-center justify-center p-4">
+
+    <div class="container-wrapper">
+        <header>
+            <h1>
+                Minha Stack de Tecnologias
+            </h1>
+            <p>Uma combinação de Backend (Flask/Python) e Frontend.</p>
+        </header>
+
+        <main>
+
+            <!-- Card: Flask (Backend Framework) -->
+            <div id="card-flask" class="logo-card" data-tech="Flask">
+                <!-- Icone SVG Simples para Flask (Frasco) -->
+                 <img src="{{ url_for('static', filename='img/Flask_logo.svg') }}" alt="Logo Flask">
+                <span class="title">Flask</span>
+                <span class="subtitle">Backend</span>
+            </div>
+
+            <!-- Card: Python (Linguagem Principal) -->
+            <div id="card-python" class="logo-card" data-tech="Python">
+                <img src="{{ url_for('static', filename='img/Python.png') }}" alt="Logo Python">
+                <span class="title">Python</span>
+                <span class="subtitle">Backend / Lógica</span>
+            </div>
+
+            <!-- Card: HTML (Estrutura) -->
+            <div id="card-html" class="logo-card" data-tech="HTML">
+                <img src="{{ url_for('static', filename='img/HTML5_logo.png') }}" alt="Logo HTML5">
+                <span class="title">HTML</span>
+                <span class="subtitle">Estrutura (Frontend)</span>
+            </div>
+
+            <!-- Card: CSS (Estilo) -->
+            <div id="card-css" class="logo-card" data-tech="CSS">
+                <img src="{{ url_for('static', filename='img/CSS3_logo.png') }}" alt="CSS3 Logo">
+                <span class="title">CSS</span>
+                <span class="subtitle">Estilização (Frontend)</span>
+            </div>
+
+            <!-- Card: JavaScript (Interatividade) -->
+            <div id="card-javascript" class="logo-card" data-tech="JavaScript">
+                <img src="{{ url_for('static', filename='img/js_logo.png') }}" alt="JavaScript Logo">
+                <span class="title">JavaScript</span>
+                <span class="subtitle">Interatividade (Frontend)</span>
+            </div>
+        </main>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-4 text-blue-400">Sobre a Stack</h2>
+            <div class="info-content">
+                <p>
+                    O Python com Flask forma o coração do Backend, responsável pelo roteamento de URLs, lógica de negócios, e processamento de dados do lado do servidor. Flask é um micro-framework que oferece flexibilidade e leveza.
+                </p>
+                <p>
+                    No Frontend, HTML fornece a estrutura de todo o conteúdo. O CSS cuida de toda a apresentação visual e design. E o JavaScript adiciona a camada de interatividade, manipulação da DOM e comunicação assíncrona com o Backend.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/stack.js') }}"></script>
+</body>
+</html>
