@@ -3,7 +3,7 @@
 Este projeto é uma aplicação web simples desenvolvida com Flask, com foco em rotas, templates HTML, validação de formulários e estruturação de diretórios estáticos.
 
 ---
-🚀 Tecnologias Utilizadas
+# 🚀 Tecnologias Utilizadas
 
 Python 3
 
