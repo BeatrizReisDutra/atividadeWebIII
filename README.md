@@ -31,6 +31,7 @@ Este projeto é uma aplicação web simples desenvolvida com Flask, com foco em 
 │   │   └── Python.png
 │   └── js/
 │       ├── cadastro.js
+│       ├── login.js
 │       └── stack.js
 │
 ├── templates/
