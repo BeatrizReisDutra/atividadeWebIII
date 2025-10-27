@@ -1,15 +1,17 @@
-/* Variáveis CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* Variáveis CSS (Adotando cores do novo layout) */
 :root {
-    --cor-principal: #007BFF; /* Azul Flask */
+    --cor-principal: #007BFF; /* Azul Principal (Adaptado) */
     --cor-secundaria: #343A40; /* Cinza Escuro */
-    --cor-fundo: #F8F9FA;
-    --cor-texto: #212529;
+    --cor-fundo: #F8F9FA; /* Fundo Leve */
+    --cor-texto: #212529; /* Texto Escuro */
     --tamanho-maximo: 1200px;
 }
 
-/* Reset Básico e Fontes */
+/* Reset Básico e Fontes (Combinado) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif; /* Priorizando Inter */
     margin: 0;
     padding: 0;
     background-color: var(--cor-fundo);
@@ -17,7 +19,18 @@ body {
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Novo layout principal */
+}
+
+/* Container de Layout (Usado para Header, Main e Footer) */
+.container {
+    max-width: var(--tamanho-maximo);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Garante que o container use a largura total até o max-width */
 }
 
 /* Estilo do Cabeçalho */
@@ -28,15 +41,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-}
-
-.container {
-    max-width: var(--tamanho-maximo);
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -59,26 +63,100 @@ nav a:hover {
     color: var(--cor-principal);
 }
 
-/* Estilo do Conteúdo Principal */
+/* Estilo do Conteúdo Principal (Centraliza o card) */
 main {
-    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    flex-grow: 1; 
     padding: 40px 20px;
     max-width: var(--tamanho-maximo);
     margin: 0 auto;
     width: 100%;
+    display: flex;
+    justify-content: center; /* Centraliza o card horizontalmente */
+    align-items: center; /* Centraliza o card verticalmente */
+    flex-direction: column;
+    box-sizing: border-box; /* Inclui padding na largura/altura */
+}
+
+/* --- ESTILOS DO WELCOME CARD (Adaptados para o novo tema) --- */
+
+.welcome-card {
+    width: 100%;
+    max-width: 576px;
+    background-color: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-radius: 0.75rem;
+    padding: 3rem;
+    text-align: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+    border: 1px solid #f3f4f6;
+    margin: auto; /* Garante centralização extra dentro do flex do main */
+}
+
+.welcome-card:hover {
+    transform: scale(1.01); 
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+    font-size: 3rem; 
+    margin-bottom: 1.5rem;
+}
+
+.main-title {
+    font-size: 2.25rem; 
+    font-weight: 800; 
+    color: var(--cor-principal); /* Usando nova variável */
+    margin-bottom: 1rem; 
+    letter-spacing: -0.025em; 
+}
+
+.welcome-message {
+    font-size: 1.125rem; 
+    color: var(--cor-texto); /* Usando nova variável */
+    margin-bottom: 2rem; 
+    line-height: 1.625; 
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 2rem; 
+    font-size: 1.125rem; 
+    font-weight: 600; 
+    color: #ffffff;
+    background-color: var(--cor-principal); /* Usando nova variável */
+    border-radius: 9999px; 
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #0069d9; /* Um tom mais escuro de --cor-principal */
+    transform: scale(1.05);
+}
+
+.cta-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Foco baseado em --cor-principal */
+}
+
+.secondary-message {
+    margin-top: 2rem; 
+    font-size: 0.875rem;
+    color: #9ca3af; 
 }
 
 /* Estilo do Rodapé */
 footer {
-    background-color: var(--cor-secundaria);
+    background-color: var(--cor-principal);
     color: var(--cor-fundo);
     text-align: center;
     padding: 20px 0;
-    margin-top: auto; /* Garante que o rodapé fique no final da página */
+    margin-top: auto; 
 }
 footer .container {
-    /* O margin: 0 auto; já está centralizando o container em relação ao footer */
-    text-align: center; /* Centraliza o texto DENTRO do container */
+    text-align: center;
+    justify-content: center; 
 }
 
 /* Responsividade básica para navegação */

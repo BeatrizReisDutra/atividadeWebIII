@@ -80,13 +80,15 @@ body {
 }
 
 /* Feedback de Validação */
+
 .validation-box {
-    font-size: 0.875rem;
-    padding: 0.75rem;
-    background-color: #f9fafb; /* Gray-50 */
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
 }
+
 .validation-box p {
     font-weight: 600;
     color: #374151;
@@ -96,7 +98,7 @@ body {
 .validation-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 5px 0 0 0;
 }
 .validation-list li {
     margin-bottom: 0.25rem;
@@ -111,14 +113,19 @@ body {
     height: 1rem;
     margin-right: 0.5rem;
 }
-.validation-item.valid svg {
-    color: var(--color-success);
+
+.validation-item {
+    padding: 2px 0;
+    font-size: 0.9em;
+    color: #666; /* Cor padrão */
 }
-.validation-item.invalid svg {
-    color: var(--color-error);
-}
+
 .validation-item.valid {
-    color: var(--color-text-dark);
+    color: var(--color-success);
+    font-weight: 600;
+}
+.validation-item.invalid {
+    color: var(--color-error);
 }
 
 /* Botão de Submissão */

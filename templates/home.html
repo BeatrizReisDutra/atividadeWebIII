@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Projeto Flask{% endblock %}</title>
+    <title>{% block title %}Página Home{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
     {% block head %}{% endblock %}
-
 </head>
     <body>
         <header>
@@ -23,14 +21,32 @@
                 </nav>
             </div>
         </header>
-
+        {% block content %} 
         <main>
-            {% block content %}{% endblock %}
-        </main>
+                <div class="welcome-card">
 
+                <!-- Ícone de Boas-Vindas -->
+                <div class="icon">
+                    🎉
+                </div>
+
+                <!-- Título Principal -->
+                <h1 class="main-title">
+                    Olá! Seja Bem-Vindo(a).
+                </h1>
+
+                <!-- Mensagem Secundária/Dica -->
+                <p class="secondary-message">
+                    Clique acima para navegar entre as páginas.
+                </p>
+
+            </div>
+            
+        </main>
+        {% endblock %}
         <footer>
             <div class="container">
-                <p>&copy; 2025 Projeto Web III | Feito com Flask.</p>
+                <p>&copy; Construído com ❤️ | Feito com Flask.</p>
             </div>
         </footer>
 
